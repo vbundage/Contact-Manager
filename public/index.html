@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <script src="./javascripts/jquery.js"></script>
+    <script src="./javascripts/handlebars.js"></script>
+    <script src="https://kit.fontawesome.com/600e61de04.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="#home">Contact Manager</a></h1>
+      <p>Using Express, Handlebars, and FontAwesome</p>
+    </header>
+
+    <main>
+      <div id="contacts-control" class="gray-container flex">
+        <button class="add-btn add-contact-btn">Add Contact</button>
+        <button id="show-contacts-btn">Show All Contacts</button>
+        <input id="search" type="text" placeholder="Search">
+      </div>
+
+      <div id="empty-contacts-msg" class="gray-container">
+        <h3>There is no contacts.</h3>
+        <button class="add-btn add-contact-btn">Add Contact</button>
+      </div>
+
+      <div id="empty-filter-msg" class="gray-container hide">
+        <h3>There is no contacts starting with <span></span>.</h3>
+      </div>
+
+      <div class="hide form-container">
+        <h2>Create Tag</h2>
+        <form id="tag-form">
+          <fieldset>
+            <label>
+              <span>Tag Name: </span>
+              <input id="new_tag" name="new_tag" type="text" required>
+            </label>
+          </fieldset>
+          <button id="tag-submit" class="form-btn" type="submit">Submit</button>
+          <button id="tag-cancel" class="form-btn" type="button">Cancel</button>
+        </form>
+      </div>
+
+      <div class="hide form-container">
+        <h2>Create Contact</h2>
+
+        <form id="contact-form" data-id="" data-type="create">
+          <fieldset>
+            <div class="field">
+              <label>
+                <span>Full name:</span>
+                <input type="text" id="full_name" name="full_name" required autocomplete="off">
+              </label>
+              <small></small>
+            </div>
+            
+            <div class="field">
+              <label>
+                <span>Email address:</span>
+                <input type="email" id="email" name="email" pattern=".+@.+" required autocomplete="off">
+              </label>
+              <small></small>
+            </div>
+            
+            <div class="field">
+              <label>
+                <span>Telephone number:</span>
+                <input type="tel" id="phone_number" name="phone_number" required autocomplete="off">
+              </label>
+              <small></small>
+            </div>
+
+            <div id="tags-field" class="field">
+              <label>
+                <span>Tags:</span>
+                <script id="tagTemplate" type="text/x-handlebars">
+                  {{#each tags}}
+                    <input type="checkbox" id="{{print_tag_name}}" name="tags" value="{{print_tag_name}}">
+                    <label for="{{print_tag_name}}">{{print_tag_name}}</label>
+                  {{/each}}
+                </script>
+                <div>
+                  <button class="add-btn add-tag-btn" type="button">Add Tag</button>
+                </div>
+              </label>
+            </div>
+
+            <button id="contact-submit" class="form-btn" type="submit">Submit</button>
+            <button id="contact-cancel" class="form-btn" type="button">Cancel</button>
+          </fieldset>
+        </form>
+      </div>
+
+      <div id="contacts" class="flex hide">
+        <script id="contactTemplate" type="text/x-handlebars">
+          <div class="contact" data-id="{{id}}" data-name="{{full_name}}" data-email="{{email}}" data-phone="{{phone_number}}" data-tags="{{tags}}">
+            <h3>{{full_name}}</h3>
+            <dl>
+              <dt>Phone Number:</dt>
+              <dd>{{phone_number}}</dd>
+              <dt>Email:</dt>
+              <dd>{{email}}</dd>
+              <dt>Tags:</dt>
+              <dd>
+                {{#each tags}}
+                  <a class="tag">{{print_tag_name}}</a>
+                {{/each}}
+              </dd>
+              <button class="edit-btn"><span class="fas fa-pencil-alt"></span> Edit</button>
+              <button class="delete-btn"><span class="fas fa-trash-alt"></span> Delete</button>
+            </dl>
+          </div>
+        </script>
+      </div>
+    </main>
+
+    <footer>
+      Developed by <a href="https://github.com/vbundage">Vincent Bundage</a> and <a href="https://launchschool.com">Launch School</a>.
+    </footer>
+
+    <script src="javascripts/contacts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+@import './reset.css';
+
+body {
+  font-family: 'Nimbus Sans';
+  font-size: 14px;
+}
+
+header {
+  background: linear-gradient(#563d7c, #6e5398);
+  height: 138px;
+  font-size: 20px;
+  font-weight: 300;
+  color:#c9bfe3;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: 'Nimbus Sans';
+  padding: 31px 0 16px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 40px 0 12px;
+}
+
+h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+small {
+  font-size: 85%;
+  width: 250px;
+  display: block;
+  margin: 8px 0 0 200px;
+  text-align: left;
+  color: #bb4f4d;
+}
+
+main {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 1140px;
+  border-top: 1.8px solid #f5f5f5;
+  padding-top: 22px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+fieldset {
+  margin: 20px 0;
+}
+
+#tags-field {
+  margin-left: 320px;
+  text-align: left;
+}
+
+#tags-field div {
+  display: inline-block;
+}
+
+.field {
+  margin: 0 auto 25px;
+  text-align: right;
+  width: 750px;
+}
+
+.invalid {
+  border-color:#a93333;
+}
+
+.field input {
+  width: 535px;
+  outline: none;
+  padding: 8px 10px 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* input:focus {
+  border-color: #7cb5e3;
+} */
+
+label span {
+  margin-right: 28px;
+  font-weight: bold;
+}
+
+footer a, dd a {
+  text-decoration: none;
+  color: #538ed8;
+  cursor: pointer;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #3e5983;
+}
+
+#contacts-control {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 21px 0;
+  align-items: center;
+  justify-content: space-around; 
+}
+
+#empty-contacts-msg {
+  box-sizing: border-box;
+  margin: 0 15px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#empty-filter-msg {
+  box-sizing: border-box;
+  text-align: center;
+  margin: 20px 15px;
+  padding-bottom: 25px;
+}
+
+#empty-filter-msg span {
+  font-weight: bold;
+}
+
+.form-container {
+  width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 41px;
+}
+
+.form-container h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.gray-container {
+  background-color: #f5f5f5;
+  border: 1.5px solid #e3e3e3;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, .05);
+}
+
+button {
+  border: 1px solid #563d7c;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #563d7c;
+}
+
+button:hover {
+  background-color: #563d7c;
+  color: white;
+  cursor: pointer;
+}
+
+.add-btn, #show-contacts-btn {
+  font-size: 18px;
+  background-color: transparent;
+  padding: 10px 15px;
+}
+
+.form-btn {
+  font-size: 18px;
+  padding: 12px 100px;
+}
+
+#submit {
+  margin: 0 35px 0 200px;
+}
+
+#contacts {
+  flex-wrap: wrap;
+}
+
+#contacts button {
+  padding: 8px;
+  margin-top: 14px;
+}
+
+.contact {
+  width: 250px;
+  margin: 0px 15px 24px;
+  padding-bottom: 20px;
+  border-bottom: 1.8px solid #f5f5f5;
+}
+
+.contact h3 {
+  margin-top: 10px;
+}
+
+.edit-btn {
+  margin-right: 16px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt, dd {
+  margin-bottom: 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.hide {
+  display: none;
+  height: 0px;
+  position: absolute;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 20px;
+}
