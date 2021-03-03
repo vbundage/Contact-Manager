@@ -399,10 +399,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   class App {
-    constructor() {
-      this.init();
-    }
-
     async init() {
       this.EventsManager = new EventsManager();
       this.ContactsManager = this.EventsManager.ContactsManager;
