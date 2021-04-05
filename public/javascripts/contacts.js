@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTags(tags) {
       this.clearTags();
       this.tagsField.querySelector('div')
-        .insertAdjacentHTML('beforebegin', this.templates['tagTemplate']({ tags }));
+        .insertAdjacentHTML('beforebegin',
+          this.templates['tagTemplate']({ tags }));
 
       if (this.contactForm.dataset.id) {
         const contact = this.contactsList
